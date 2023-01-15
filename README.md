@@ -1,2 +1,2 @@
 # todo-app
-todo application with mvp
+todo application
