@@ -1,6 +1,6 @@
-package ca.purple.foo.profile
+package com.todo.ui.profile
 
-import com.todo.ui.profile.ProfileContract
+import androidx.annotation.VisibleForTesting
 import java.io.IOException
 
 open class ProfilePresenter : ProfileContract.Presenter {
@@ -30,10 +30,11 @@ open class ProfilePresenter : ProfileContract.Presenter {
         view?.onProfileNameReceived(name)
     }
 
-    open fun fetchProfileNameFromRepository(): String {
+    @VisibleForTesting
+    fun fetchProfileNameFromRepository(): String {
         //Long operation that calls the repository and return the name or throws an exception
 
-        return "Hello"
+        return "HelloXX"
     }
 
 

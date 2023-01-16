@@ -6,15 +6,16 @@ plugins {
 
 android {
     namespace 'com.todo'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.todo"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
+        buildConfigField 'String', 'BASE_URL', (project.findProperty("BASE_URL") ?: "")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -35,8 +36,8 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
@@ -56,6 +57,9 @@ dependencies {
     implementation "com.google.dagger:dagger:$dagger_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:$mockito_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
