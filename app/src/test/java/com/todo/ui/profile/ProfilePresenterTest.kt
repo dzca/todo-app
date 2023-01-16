@@ -19,11 +19,11 @@ class ProfilePresenterTest {
     @Spy
     private var presenter: ProfilePresenter = ProfilePresenter()
 
-    @Before
-    fun setUp() {
-        doNothing().when(presenter)
-        //presenter.attach(view)
-    }
+//    @Before
+//    fun setUp() {
+//        doNothing().when(presenter)
+//        //presenter.attach(view)
+//    }
 
     @Test
     fun `test_fetchProfileName_calles_onProfileNameReceived_on_positive_response`() {
